@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #181818;
+            color: #fff;
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 240px;
+            background-color: #202020;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #fff;
+            padding: 15px;
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #383838;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .sidebar a span {
+            margin-left: 10px;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .top-bar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+        }
+
+        .top-bar button {
+            background-color: #383838;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .top-bar button:hover {
+            background-color: #505050;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .video {
+            background-color: #202020;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .video:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .video img {
+            width: 100%;
+            display: block;
+        }
+
+        .video .details {
+            padding: 10px;
+        }
+
+        .video .details h3 {
+            margin: 0 0 5px;
+            font-size: 16px;
+        }
+
+        .video .details p {
+            margin: 0;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        /* Sign-in Prompt */
+        .sign-in {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .sign-in a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+
+        .sign-in a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#"><span>🏠</span><span>Home</span></a>
+        <a href="#"><span>🎬</span><span>Shorts</span></a>
+        <a href="#"><span>📺</span><span>Subscriptions</span></a>
+        <a href="#"><span>📚</span><span>Library</span></a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Top Suggestions Bar -->
+        <div class="top-bar">
+            <button>All</button>
+            <button>Music</button>
+            <button>Podcasts</button>
+            <button>Mixes</button>
+            <button>Chess</button>
+            <button>Sketch comedy</button>
+            <button>Sitcoms</button>
+            <button>HTML</button>
+            <button>Gaming</button>
+            <button>Comedy clubs</button>
+            <button>Basketball moves</button>
+            <button>Live</button>
+            <button>Supercar</button>
+        </div>
+
+        <!-- Video Grid -->
+        <div class="video-grid">
+            <div class="video">
+                <a href="https://www.google.com/chrome/download-chrome/?brand=LBLV&dclid=&gclid=Cj0KCQiAsaS7BhDPARIsAAX5cSAVCVGtPu3DQS1NefEgpu-sYcV_tJF7uCXccx4eVQC4quH3xZbkkDoaAuBREALw_wcB">
+                    <img src="chromeadd.png" alt="Video Thumbnail">
+                </a> 
+                <div class="details">
+                    <h3>Chrome is Fast</h3>
+                    <p>Sponsored</p>
+                </div>
+            </div>
+            <div class="video">
+                <a href="https://www.youtube.com/watch?v=N07mvIiosww">
+                    <img src="mcdwork.png" alt="Video Thumbnail">
+                </a>
+                <div class="details">
+                    <h3>We Worked at McDonald's</h3>
+                    <p>Kai Cenat Live • 4.5M views</p>
+                </div>
+            </div>
+            <div class="video">
+                <a href="https://www.youtube.com/watch?v=sqexpq2Au8o">
+                    <img src="nextchapterthumb.png" alt="Video Thumbnail">
+                </a>
+                <div class="details">
+                    <h3>The Shiftiest 1v1 Ever</h3>
+                    <p>The Next Chapter • 1.5M views</p>
+                </div>
+            </div>
+            <div class="video">
+                <a href="https://www.youtube.com/watch?v=82XbRBvVjcM">
+                    <img src="balloonpop.png" alt="Video Thumbnail">
+                </a>
+                <div class="details">
+                    <h3>Sidemen Pop the Balloon</h3>
+                    <p>Sidemen • 10M views</p>
+                </div>
+            </div>
+            <div class="video">
+                <a href="https://www.mazda.ca/en/vehicles/cx-70-inline6turbo/?gad_source=2&gclid=Cj0KCQiAsaS7BhDPARIsAAX5cSCzuOwIFzaR1tDHdR4t_GKjW-gBTOedLfDV0MmL_MYiVUewlGfMu7MaAmrVEALw_wcB">
+                    <img src="mazdadd.png" alt="Video Thumbnail">
+                </a>
+                <div class="details">
+                    <h3>An Inline 6 Turbo</h3>
+                    <p>Sponsored</p>
+                </div>
+            </div>
+            <div class="video">
+                <a href="https://www.youtube.com/watch?v=xTg-sP4LEO0">
+                    <img src="simamom.png" alt="Video Thumbnail">
+                </a>
+                <div class="details">
+                    <h3>Sima Anirudh Mom's is Live</h3>
+                    <p>Sima Anirudh Mom's • Live Now</p>
+                </div>
+            </div>
+            <div class="video">
+                <a href="https://www.youtube.com/watch?v=jwerp2SNiTQ">
+                    <img src="personalrec.png" alt="Video Thumbnail">
+                </a>
+                <div class="details">
+                    <h3>32 Kill Solo Squads</h3>
+                    <p>Ninja • 52M views</p>
+                </div>
+            </div>
+            <div class="video">
+                <a href="https://www.youtube.com/watch?v=oPO3-m060uQ">
+                    <img src="everychain.png" alt="Video Thumbnail">
+                </a>
+                <div class="details">
+                    <h3>Every ChainsFR High Video</h3>
+                    <p>ChainsFR Shorts • 2.9M views</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sign-in Prompt -->
+        <div class="sign-in">
+            <p>Not signed in? <a href="#">Sign in</a> to access personalized content.</p>
+        </div>
+    </div>
+</body>
+</html>
